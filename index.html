@@ -36,7 +36,7 @@
           <input id="zip" ng-model="form.zip" ng-pattern="/^\d{5}$/" required type="number" name="zip" ng-class="{ 'invalidInput' : firstForm.zip.$invalid && firstForm.zip.$dirty, validInput : firstForm.zip.$valid }">
         </div>
 
-        <button type="submit" name="submit">Submit</button>
+        <button ng-disabled="firstForm.$invalid" type="submit" name="submit">Submit</button>
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
